@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional | Estudiante de Ingeniería</title>
+    
+    <!-- Tailwind CSS por CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#1d4ed8',
+                        darkbg: '#0f172a',
+                        darkcard: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="css/portafolio.css">
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-darkbg dark:text-gray-100 transition-colors duration-300 font-sans">
+
+    <!-- Navegación -->
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-darkbg/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+        <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#inicio" class="text-xl font-bold tracking-tight text-primary flex items-center gap-2">
+                <i class="fa-solid fa-code"></i> Mi Portafolio
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#inicio" class="hover:text-primary transition">Inicio</a>
+                <a href="#sobre-mi" class="hover:text-primary transition">Sobre mí</a>
+                <a href="#habilidades" class="hover:text-primary transition">Habilidades</a>
+                <a href="#proyectos" class="hover:text-primary transition">Proyectos</a>
+                <a href="#contacto" class="hover:text-primary transition">Contacto</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <!-- Botón Modo Oscuro -->
+                <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-yellow-400 hover:opacity-80 transition" aria-label="Cambiar Tema">
+                    <i id="theme-icon" class="fa-solid fa-moon"></i>
+                </button>
+                
+                <!-- Menú Móvil Botón -->
+                <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Menú Móvil Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 bg-white dark:bg-darkcard border-b border-gray-200 dark:border-gray-800">
+            <a href="#inicio" class="block py-2 hover:text-primary">Inicio</a>
+            <a href="#sobre-mi" class="block py-2 hover:text-primary">Sobre mí</a>
+            <a href="#habilidades" class="block py-2 hover:text-primary">Habilidades</a>
+            <a href="#proyectos" class="block py-2 hover:text-primary">Proyectos</a>
+            <a href="#contacto" class="block py-2 hover:text-primary">Contacto</a>
+        </div>
+    </header>
+
+    <!-- Sección Inicio (Hero) -->
+    <section id="inicio" class="min-h-[85vh] flex items-center justify-center py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="relative inline-block mb-6">
+                <!-- Foto Real del Estudiante -->
+                <img src="img/perfil.jpg" alt=" " class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-primary shadow-xl mx-auto">
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">
+                Hola, soy <span class="text-primary">Garcia Unda Carlos Enrique</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
+                Estudiante de Ingeniería en Sistemas Computacionales. Apasionado por el desarrollo web frontend, la resolución de problemas y la creación de soluciones tecnológicas funcionales.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#proyectos" class="px-6 py-3 bg-primary hover:bg-secondary text-white font-medium rounded-lg shadow-md transition flex items-center gap-2">
+                    <i class="fa-solid fa-briefcase"></i> Ver Proyectos
+                </a>
+                <a href="#contacto" class="px-6 py-3 border border-gray-300 dark:border-gray-700 hover:border-primary font-medium rounded-lg transition flex items-center gap-2">
+                    <i class="fa-solid fa-envelope"></i> Contactarme
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="py-16 bg-white dark:bg-darkcard transition-colors">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 border-b-2 border-primary w-fit mx-auto pb-2">Sobre Mí</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Actualmente me encuentro cursando mis estudios universitarios centrados en el desarrollo de software y la arquitectura web. Me enfoco en escribir código limpio, accesible y eficiente.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Mi objetivo principal es dominar las tecnologías fundamentales del desarrollo web moderno (HTML5, CSS3, JavaScript) y expandir mis conocimientos hacia el desarrollo Backend y bases de datos.
+                    </p>
+                </div>
+                <div class="bg-gray-50 dark:bg-darkbg p-6 rounded-xl border border-gray-200 dark:border-gray-800 space-y-3">
+                    <div class="flex justify-between border-b pb-2 dark:border-gray-700">
+                        <span class="font-semibold">Educación:</span>
+                        <span class="text-gray-600 dark:text-gray-400">Ingeniería en Sistemas</span>
+                    </div>
+                    <div class="flex justify-between border-b pb-2 dark:border-gray-700">
+                        <span class="font-semibold">Ubicación:</span>
+                        <span class="text-gray-600 dark:text-gray-400">México</span>
+                    </div>
+                    <div class="flex justify-between border-b pb-2 dark:border-gray-700">
+                        <span class="font-semibold">Intereses:</span>
+                        <span class="text-gray-600 dark:text-gray-400">Desarrollo Web, UI/UX, Git</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-semibold">Disponibilidad:</span>
+                        <span class="text-green-500 font-medium">Proyectos / Prácticas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Habilidades -->
+    <section id="habilidades" class="py-16">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 border-b-2 border-primary w-fit mx-auto pb-2">Habilidades Técnicas</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Skill Card 1 -->
+                <div class="skill-card bg-white dark:bg-darkcard p-6 rounded-xl text-center border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md transition">
+                    <i class="fa-brands fa-html5 text-4xl text-orange-500 mb-3"></i>
+                    <h3 class="font-bold">HTML5</h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Estructura Web Semántica</p>
+                </div>
+                <!-- Skill Card 2 -->
+                <div class="skill-card bg-white dark:bg-darkcard p-6 rounded-xl text-center border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md transition">
+                    <i class="fa-brands fa-css3-alt text-4xl text-blue-500 mb-3"></i>
+                    <h3 class="font-bold">CSS3 & Tailwind</h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Estilos y Responsividad</p>
+                </div>
+                <!-- Skill Card 3 -->
+                <div class="skill-card bg-white dark:bg-darkcard p-6 rounded-xl text-center border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md transition">
+                    <i class="fa-brands fa-js text-4xl text-yellow-400 mb-3"></i>
+                    <h3 class="font-bold">JavaScript</h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Lógica y DOM Interactivo</p>
+                </div>
+                <!-- Skill Card 4 -->
+                <div class="skill-card bg-white dark:bg-darkcard p-6 rounded-xl text-center border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md transition">
+                    <i class="fa-brands fa-github text-4xl text-gray-800 dark:text-white mb-3"></i>
+                    <h3 class="font-bold">Git & GitHub</h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Control de Versiones</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="py-16 bg-white dark:bg-darkcard transition-colors">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 border-b-2 border-primary w-fit mx-auto pb-2">Proyectos Destacados</h2>
+            <p class="text-center text-gray-600 dark:text-gray-400 mb-8">Filtra y explora los trabajos realizados y proyectados.</p>
+
+            <!-- Filtros JS -->
+            <div class="flex justify-center gap-3 mb-8">
+                <button class="filter-btn active-filter px-4 py-2 text-sm font-medium rounded-lg bg-primary text-white" data-filter="todos">Todos</button>
+                <button class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-primary hover:text-white transition" data-filter="web">Web</button>
+                <button class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-primary hover:text-white transition" data-filter="utilidades">Utilidades</button>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Proyecto 1 -->
+                <div class="project-item web bg-gray-50 dark:bg-darkbg rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-lg transition">
+                    <img src="img/proyecto1.jpg" alt="Plataforma Escolar" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl mb-2">Sistema de Gestión Escolar</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Aplicación web para administración de calificaciones y asistencia académica.</p>
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-xs bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-1 rounded">HTML</span>
+                            <span class="text-xs bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200 px-2 py-1 rounded">Tailwind</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm font-medium">
+                            <a href="#" class="text-primary hover:underline flex items-center gap-1">Demo <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                            <a href="#" class="text-gray-600 dark:text-gray-400 hover:underline flex items-center gap-1"><i class="fa-brands fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="project-item utilidades bg-gray-50 dark:bg-darkbg rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-lg transition">
+                    <img src="img/proyecto2.jpg" alt="Calculadora Interactiva" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl mb-2">Calculadora Financiera Web</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Herramienta interactiva en JS para cálculo de presupuestos y ahorro mensual.</p>
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-xs bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 rounded">JavaScript</span>
+                            <span class="text-xs bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-1 rounded">CSS3</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm font-medium">
+                            <a href="#" class="text-primary hover:underline flex items-center gap-1">Demo <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                            <a href="#" class="text-gray-600 dark:text-gray-400 hover:underline flex items-center gap-1"><i class="fa-brands fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="project-item web bg-gray-50 dark:bg-darkbg rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-lg transition">
+                    <img src="img/proyecto3.jpg" alt="Landing Page Comercio" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl mb-2">Landing Page para Comercio</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Diseño moderno adaptativo promocional con catálogo dinámico de productos.</p>
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-xs bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200 px-2 py-1 rounded">Tailwind</span>
+                            <span class="text-xs bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 rounded">JS</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm font-medium">
+                            <a href="#" class="text-primary hover:underline flex items-center gap-1">Demo <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                            <a href="#" class="text-gray-600 dark:text-gray-400 hover:underline flex items-center gap-1"><i class="fa-brands fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="py-16">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 border-b-2 border-primary w-fit mx-auto pb-2">Contacto</h2>
+            
+            <form id="contact-form" class="bg-white dark:bg-darkcard p-8 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm space-y-6">
+                <div>
+                    <label for="nombre" class="block text-sm font-medium mb-2">Nombre completo</label>
+                    <input type="text" id="nombre" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-darkbg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <div>
+                    <label for="correo" class="block text-sm font-medium mb-2">Correo electrónico</label>
+                    <input type="email" id="correo" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-darkbg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <div>
+                    <label for="mensaje" class="block text-sm font-medium mb-2">Mensaje</label>
+                    <textarea id="mensaje" rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-darkbg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 bg-primary hover:bg-secondary text-white font-medium rounded-lg shadow transition">
+                    Enviar Mensaje
+                </button>
+            </form>
+            <div id="form-feedback" class="hidden mt-4 p-4 rounded-lg text-center font-medium"></div>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="border-t border-gray-200 dark:border-gray-800 py-8 bg-white dark:bg-darkbg text-center text-sm text-gray-500">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>© 2026 [Tu Nombre Completo]. Basado en plantilla Tailwind adaptada.</p>
+            <div class="flex space-x-4 text-lg">
+                <a href="https://github.com" target="_blank" class="hover:text-primary transition" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="hover:text-primary transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:tu-correo@ejemplo.com" class="hover:text-primary transition" aria-label="Correo"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de Interactividad -->
+    <script src="js/portafolio.js"></script>
+</body>
+</html>

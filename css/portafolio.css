@@ -1,0 +1,41 @@
+/* Custom CSS para complementar Tailwind CSS */
+
+/* Smooth Scroll y offsets para navegación */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Efectos visuales de tarjetas de proyectos y skills */
+.skill-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+}
+
+.project-item {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-6px);
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1d4ed8;
+}
